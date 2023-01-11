@@ -316,3 +316,22 @@ h6{
     margin-top: 10%;
     font-size: 0.9em;
 }
+
+/* ---------- PAGE DES PRODUITS  --------- */
+.description{
+    text-align: center;
+}
+
+/* Titres */
+.titleprod1{
+    font-size: 2em;
+    margin-top: 6%;
+    position: relative;
+    left: 2%;
+}
+.titleprod2{
+    font-size: 1em;
+    margin-bottom: 5%;
+    position: relative;
+    left: 2%;
+}

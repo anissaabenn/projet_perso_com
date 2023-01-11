@@ -19,7 +19,6 @@ class UserController
     public function newUserValidation()
     {
         $this->userManager->newUserDB($_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['adress'], $_POST['numberPhone'], 'user');
-
-        require_once "view/pageUserView/connexion.view.php";
+        header('Location:' . URL . "connexion");
     }
 }

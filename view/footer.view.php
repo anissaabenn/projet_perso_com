@@ -7,9 +7,9 @@
     </div>
     <p class="reseaux">@A_Cosmetics</p>
     <ul class="list">
-        <li><a href="confidentialite">Politique de confidentialité</a></li>
-        <li><a href="politique">Politique d'accessibilité</a></li>
-        <li><a href="termes">Termes et conditions d'utilisation</a></li>
+        <li><a href="<?= URL ?>confidentialite">Politique de confidentialité</a></li>
+        <li><a href="<?= URL ?>politique">Politique d'accessibilité</a></li>
+        <li><a href="<?= URL ?>termes">Termes et conditions d'utilisation</a></li>
     </ul>
 </footer>
 

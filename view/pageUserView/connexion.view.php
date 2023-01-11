@@ -17,7 +17,7 @@
                     <input type="password" name="password" class="form-control" placeholder="Entrez votre mot de passe">
                 </div>
                 <button type="submit" class="btn btn-primary" id="connect">Se connecter</button>            
-                <p>Vous n'avez pas de compte ? Cliquez <a href="inscription">ici</a> pour vous inscrire</p>
+                <p>Vous n'avez pas de compte ? Cliquez <a href="<?= URL ?>inscription">ici</a> pour vous inscrire</p>
             </fieldset>
         </form>
     </div>

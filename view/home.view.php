@@ -1,3 +1,4 @@
+<?php require_once "header.view.php"; ?>
 <main>
     <div class="img_accueil">
         <span class="badge">New</span>
@@ -39,3 +40,4 @@
         </div>
     </div>
 </main>
+<?php require_once "footer.view.php"; ?>

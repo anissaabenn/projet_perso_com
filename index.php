@@ -3,6 +3,9 @@
 require_once "controller/ProductController.php";
 $productController = new ProductController();
 
+require_once "controller/UserController.php";
+$userController = new UserController();
+
 if (empty($_GET['page'])) {
     $productController->displayFavProducts();
 }else{
@@ -23,7 +26,12 @@ if (empty($_GET['page'])) {
         break;
         case "connexion" : require_once "view/pageUserView/connexion.view.php";
         break;
-        case "inscription" : require_once "view/pageUserView/inscription.view.php";
+        case "inscription":
+            if (empty($url[1])){
+                $userController->newUserForm();
+            }elseif ($url[1] === "ivalid") {
+                $userController->newUserValidation();
+            }
         break;
         case "confidentialite" : require_once "view/pageConditionGenView/confidentialite.view.php";
         break;

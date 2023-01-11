@@ -5,7 +5,7 @@
 <div class="container">
     <div class="block2">
         <h2 class="h2">Inscription</h2>
-        <form id="form" method="POST" action="#">
+        <form id="form" method="POST" action="inscription/ivalid">
             <fieldset>
                 <div class="form-group">
                     <label for="firstName" class="form-label mt-4">Nom</label>

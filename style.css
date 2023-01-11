@@ -80,3 +80,15 @@ nav{
 #sousblock2{
     background-color: #BAD0F1;
 }
+
+/* Barre de recherche */
+.d-flex{
+    position:absolute;
+    left: 70%;
+    margin-top: 2em;
+}
+
+/* Bouton rechercher hover */
+#search:hover{
+    background-color: rgb(218, 209, 209);
+}

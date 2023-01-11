@@ -1,0 +1,27 @@
+/* ---------- PAGE CONDITIONS GENERAL  --------- */
+/* Le corps de la page */
+.main{
+    margin-top: 10%;
+    margin-left: 2%;
+}
+/* Taille des titres, sous titres & textes */
+.main > p, li{
+    font-size: 0.8em;
+}
+.main > h1{
+    font-size: 3em;
+}
+.main > h2{
+    font-size: 1.2em;
+}
+.main > h3{
+    font-size: 0.9em;
+}
+.main > h4{
+    font-size: 0.9em;
+}
+.main > h5{
+    font-size: 0.9em;
+    color: black;
+    text-align: start;
+}

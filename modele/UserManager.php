@@ -100,4 +100,33 @@ class UserManager extends Manager
             $this->getUserById($id)->setNumberPhone($numberPhone);
         }
     }
+
+    //Méthode pour changement mdp
+    public function editPasswordDB($id, $password)
+    {
+        $req = "UPDATE users SET id = :id, password = :password WHERE id = :id";
+        $statement = $this->getBdd()->prepare($req);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $statement->bindValue(":password", $password, PDO::PARAM_STR);
+        $result = $statement->execute();
+
+        if ($result) {
+            $this->getUserById($id)->setFirstName($password);
+        }
+    }
+
+    //Méthode pour supprimer compte user
+    public function deleteUserDB($id)
+    {
+        $req = "DELETE FROM users WHERE id = :id";
+        $statement = $this->getBdd()->prepare($req);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $result = $statement->execute();
+        $statement->closeCursor();
+
+        if ($result) {
+            $user = $this->getUserById($id);
+            unset($user);
+        }
+    }
 }

@@ -70,4 +70,33 @@ class UserController
 
         header('Location: ' . URL . "accueil");
     }
+
+
+    //Affichage du formulaire changement mot de passe
+    public function  newPasswordForm()
+    {
+        require_once "view/pageUserView/updatepassword.php";
+    }
+
+
+    //Methode qui enregistre le changement mdp
+    public function editPasswordValidation()
+    {
+        $this->userManager->editPasswordDB($_POST['id-user'], $_POST['password']);
+
+        $user = $this->userManager->getUserById($_POST['id-user']);
+
+        $_SESSION['password'] = $user->getPassword();
+
+        session_destroy();
+        header('Location: ' . URL . "connexion");
+    }
+
+        //Methode pour supprimer compte utilisateur
+        public function deleteUser($id)
+        {
+            $this->userManager->deleteUserDB($id);
+            session_destroy();
+            header('Location: ' . URL . "accueil");
+        }
 }

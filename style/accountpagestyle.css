@@ -89,3 +89,32 @@
     background-color: #BAD0F1;
     color: black;
 }
+
+/* ---------- PAGE ADMIN  --------- */
+
+.d-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9.3%;  
+}
+
+#prod, #util, #catg{
+    width: 100%;
+    background-color: white;
+    color: #e4afd1;
+    font-size: 1.5em;
+}
+
+#prod:hover, #util:hover, #catg:hover{
+    background-color: #BAD0F1;
+    color: black;
+}
+
+/* ---------- UPDATE PASSWORD  --------- */
+
+.reconnected{
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 7.6%;
+}

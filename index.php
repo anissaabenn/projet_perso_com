@@ -64,6 +64,39 @@ if (empty($_GET['page'])) {
                 $userController->newUserValidation();
             }
             break;
+            case "admin":
+                if (empty($url[1])){
+                    require_once "view/admin/admin.view.php";
+                } elseif ($url[1] == "productsview"){
+                    $productController->displayProducts();
+                } elseif ($url[1] === "addproducts") {
+                    $productController->newProductForm();
+                } elseif ($url[1] === "pvalid") {
+                    $productController->newProductValidation();
+                } elseif ($url[1] === "editproduct") {
+                    $productController->editProductForm($url[2]);
+                } elseif ($url[1] === "editvalid") {
+                    $productController->editProductValidation();
+                } elseif ($url[1] === "deleteproduct"){
+                    $productController->deleteProduct($url[2]);
+                } elseif ($url[1] === "detailsproduct"){
+                    $productController->detailsProduct($url[2]);
+                } elseif ($url[1] === "usersview"){
+                    $userController->displayUsers();
+                }elseif($url[1] === "categoryview"){
+                    $categoryController->displayCategory();
+                }elseif ($url[1] === "addcategory"){
+                    $categoryController->newCategoryForm();
+                }elseif($url[1] === "cvalid"){
+                    $categoryController->newCategoryValidation();
+                }elseif ($url[1] === "editcategory"){
+                    $categoryController->editCategoryForm($url[2]);
+                }elseif($url[1] === "editcvalid"){
+                    $categoryController->editCategoryValidation();
+                }elseif ($url[1] === "deletecategory"){
+                    $categoryController->deleteCategory($url[2]);
+                }
+                break;
         case "confidentialite":
             require_once "view/pageConditionGenView/confidentialite.view.php";
             break;

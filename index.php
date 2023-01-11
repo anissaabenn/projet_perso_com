@@ -1,10 +1,13 @@
 <?php 
 
+require_once "controller/ProductController.php";
+$productController = new ProductController();
+
 if (empty($_GET['page'])) {
-    require_once "view/home.view.php";
+    $productController->displayFavProducts();
 }else{
     switch($_GET['page']){
-        case "accueil" : require_once "view/home.view.php";
+        case "accueil" : $productController->displayFavProducts();
         break;
         case "lips" : require_once "view/pageProductView/lips.view.php";
         break;

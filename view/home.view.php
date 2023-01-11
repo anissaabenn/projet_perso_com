@@ -12,12 +12,14 @@
 
 
     <div class="favproducts">
-        <div class="article">
-            <img class="photos" src="/utils/beauty/face/1.1.png">
-            <h3 class="h3">Nom de l'article</h3>
-            <h4 class="h4">Prix de l'article €</h4>
-            <button type="button" class="btn" id="add">Ajouter au panier</button>
-        </div>
+        <?php foreach ($products as $product) : ?>
+            <div class="article">
+                <img class="photos" src="<?= $product->getPhoto1() ?>" onmouseover="this.src='<?= $product->getPhoto2() ?>';" onmouseout="this.src='<?= $product->getPhoto1() ?>';">
+                <h3 class="h3"><?= $product->getName() ?></h3>
+                <h4 class="h4"><?= $product->getPrice() ?> €</h4>
+                <button type="button" class="btn" id="add">Ajouter au panier</button>
+            </div>
+        <?php endforeach; ?>
     </div>
 
 

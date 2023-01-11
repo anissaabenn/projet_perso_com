@@ -25,5 +25,11 @@ if (empty($_GET['page'])) {
         break;
         case "inscription" : require_once "view/pageUserView/inscription.view.php";
         break;
+        case "confidentialite" : require_once "view/pageConditionGenView/confidentialite.view.php";
+        break;
+        case "politique" : require_once "view/pageConditionGenView/politique.view.php";
+        break;
+        case "termes" : require_once "view/pageConditionGenView/termes.view.php";
+        break;
     }
 }

@@ -1,4 +1,4 @@
-<?php require_once "../header.view.php"; ?>
+<?php require_once "view/header.view.php"; ?>
 
 
 <h1 class="titleprod1">Produits nettoyants</h1>
@@ -13,4 +13,4 @@
         </div>
 </div>
 
-<?php require_once "../footer.view.php"; ?>
+<?php require_once "view/footer.view.php"; ?>

@@ -9,17 +9,17 @@ if (empty($_GET['page'])) {
     switch($_GET['page']){
         case "accueil" : $productController->displayFavProducts();
         break;
-        case "lips" : require_once "view/pageProductView/lips.view.php";
+        case "lips" : $productController->displayProductsByCategory('lips', 'view/pageProductView/lips.view.php');
         break;
-        case "eyes" : require_once "view/pageProductView/eyes.view.php";
+        case "eyes" : $productController->displayProductsByCategory('eyes', 'view/pageProductView/eyes.view.php');
         break;
-        case "face" : require_once "view/pageProductView/face.view.php";
+        case "face" : $productController->displayProductsByCategory('face', 'view/pageProductView/face.view.php');
         break;
-        case "cleaners" : require_once "view/pageProductView/cleaners.view.php";
+        case "cleaners" : $productController->displayProductsByCategory('cleaners', 'view/pageProductView/cleaners.view.php');
         break;
-        case "moisturizers" : require_once "view/pageProductView/moisturizers.view.php";
+        case "moisturizers" : $productController->displayProductsByCategory('moisturizers', 'view/pageProductView/moisturizers.view.php');
         break;
-        case "serums" : require_once "view/pageProductView/serums.view.php";
+        case "serums" : $productController->displayProductsByCategory('serums', 'view/pageProductView/serums.view.php');
         break;
     }
 }

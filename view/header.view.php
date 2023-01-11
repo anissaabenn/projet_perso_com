@@ -18,8 +18,8 @@
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="block1">Beauty</a>
                 <div class="dropdown-menu" id="sousblock1">
                     <a class="dropdown-item" href="./view/pageProductView/lips.view.php">Lèvres</a>
-                    <a class="dropdown-item" href="#">Yeux</a>
-                    <a class="dropdown-item" href="#">Visage</a>
+                    <a class="dropdown-item" href="./view/pageProductView/eyes.view.php">Yeux</a>
+                    <a class="dropdown-item" href="./view/pageProductView/face.view.php">Visage</a>
                 </div>
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="block2">Skin</a>
                 <div class="dropdown-menu" id="sousblock2">

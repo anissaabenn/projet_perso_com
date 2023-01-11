@@ -64,9 +64,40 @@ class UserManager extends Manager
 
         foreach ($this->users as $value) {
             if ($email == $value->getEmail() && $password !== $value->getPassword()) {
-            }elseif ($email == $value->getEmail() && $password == $value->getPassword()) {
+            } elseif ($email == $value->getEmail() && $password == $value->getPassword()) {
                 return $value;
             }
+        }
+    }
+
+    //Méthode récupération user by l'id
+    public function getUserById($id)
+    {
+        $this->loadUsers();
+        foreach ($this->users as $user) {
+            if ($user->getId() == $id) {
+                return $user;
+            }
+        }
+    }
+
+    //Méthode pour actualisations infos en BDD d'un nouveau user
+    public function editInfosDB($id, $firstName, $lastName, $adress, $numberPhone)
+    {
+        $req = "UPDATE users SET id = :id, firstName = :firstName, lastName = :lastName, adress = :adress, numberPhone = :numberPhone WHERE id = :id";
+        $statement = $this->getBdd()->prepare($req);
+        $statement->bindValue(":id", $id, PDO::PARAM_INT);
+        $statement->bindValue(":firstName", $firstName, PDO::PARAM_STR);
+        $statement->bindValue(":lastName", $lastName, PDO::PARAM_STR);
+        $statement->bindValue(":adress", $adress, PDO::PARAM_STR);
+        $statement->bindValue(":numberPhone", $numberPhone, PDO::PARAM_STR);
+        $result = $statement->execute();
+
+        if ($result) {
+            $this->getUserById($id)->setFirstName($firstName);
+            $this->getUserById($id)->setLastName($lastName);
+            $this->getUserById($id)->setAdress($adress);
+            $this->getUserById($id)->setNumberPhone($numberPhone);
         }
     }
 }

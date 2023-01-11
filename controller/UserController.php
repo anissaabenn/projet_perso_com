@@ -43,4 +43,31 @@ class UserController
         $_SESSION['role'] = $user->getRole();
         header('Location: ' . URL . "accueil");
     }
+
+    //Affichage du formulaire de modifications infos compte user
+    public function editInfosUserForm($id)
+    {
+
+        $user = $this->userManager->getUserById($id);
+        require_once "view/pageUserView/updateinfos.view.php";
+    }
+
+    //Methode qui enregistre les changements information de l'user
+    public function editInfosValidation()
+    {
+        $this->userManager->editInfosDB($_POST['id-user'], $_POST['firstName'], $_POST['lastName'], $_POST['adress'], $_POST['numberPhone']);
+
+        $user = $this->userManager->getUserById($_POST['id-user']);
+
+        $_SESSION['id'] = $user->getId();
+        $_SESSION['firstName'] = $user->getFirstName();
+        $_SESSION['lastName'] = $user->getLastName();
+        $_SESSION['email'] = $user->getEmail();
+        $_SESSION['password'] = $user->getPassword();
+        $_SESSION['adress'] = $user->getAdress();
+        $_SESSION['numberPhone'] = $user->getNumberPhone();
+        $_SESSION['role'] = $user->getRole();
+
+        header('Location: ' . URL . "accueil");
+    }
 }

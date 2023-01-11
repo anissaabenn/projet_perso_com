@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(239, 233, 233);    
+}
+
+/* Barre de nav général */
+nav{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+/* Bouton home */
+.navbar-brand{
+    margin: 0;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-brand:hover{
+    background-color: rgb(218, 209, 209);
+}
+
+
+/* Les 2 boutons du menu en général */
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    width: 83%;
+}
+
+/* Taille & emplacement des 2 boutons du menu */
+.nav-link{
+    width: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Couleur unique des 2 menus */
+#block1{
+    background-color: #e4afd1;
+}
+#block2{
+    background-color: #BAD0F1;
+}
+
+/* Taille & emplacement de la partie des icones */
+.icone{
+    width: 7%;
+    display: flex;
+}
+
+/* Taille & emplacement de chaque icone */
+.fa{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Effet lors du passage de la sourie sur icone */
+.fa:hover{
+    background-color: rgb(218, 209, 209);
+}
+
+/* Taille & emplacement des sous menus */
+.dropdown-menu{
+    width: 41.5%;
+    text-align: center;
+    border: none;
+}
+
+/* Couleur unique des sous menus */
+#sousblock1{
+    background-color: #e4afd1;
+}
+#sousblock2{
+    background-color: #BAD0F1;
+}

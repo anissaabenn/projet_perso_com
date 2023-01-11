@@ -21,5 +21,9 @@ if (empty($_GET['page'])) {
         break;
         case "serums" : $productController->displayProductsByCategory('serums', 'view/pageProductView/serums.view.php');
         break;
+        case "connexion" : require_once "view/pageUserView/connexion.view.php";
+        break;
+        case "inscription" : require_once "view/pageUserView/inscription.view.php";
+        break;
     }
 }

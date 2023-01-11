@@ -335,3 +335,68 @@ h6{
     position: relative;
     left: 2%;
 }
+
+/* ---------- PAGE CONNEXION COMPTE  --------- */
+
+/* Titre de la page */
+.welcome{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    font-size: 3em;
+}
+
+/* Deuxieme titres */
+.h2{
+    margin-top: 5%;
+    color: white;
+}
+
+/* Container des 2 formulaires */
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Bloc de chaque formulaire individuelle */
+/* Bloc connexion */
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-color: #BAD0F1;
+    padding: 0% 0% 0% 1%;
+}
+/* Bloc inscription */
+.block2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-color: #e4afd1;
+    padding: 1% 0% 1% 1%;
+}
+
+/* Formulaire */
+#form{
+    width: 100%;
+
+}
+
+.formulaires{
+    margin-left: 1%;
+}
+
+/* Les inputs des formulaires */
+.form-group{
+    width: 97%;
+}
+
+/* Boutons des 2 forms */
+#inscript, #connect {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}

@@ -29,7 +29,7 @@
                 </div>
             </ul>
             <div class="icone">
-                <a href="#" class="fa fa-user" role="button" style="font-size:25px;"></a>
+                <a href="connexion" class="fa fa-user" role="button" style="font-size:25px;"></a>
                 <a href="#" class="fa fa-shopping-cart" role="button" style="font-size:25px;"></a>
             </div>
         </nav>

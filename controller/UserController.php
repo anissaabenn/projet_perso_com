@@ -92,11 +92,18 @@ class UserController
         header('Location: ' . URL . "connexion");
     }
 
-        //Methode pour supprimer compte utilisateur
-        public function deleteUser($id)
-        {
-            $this->userManager->deleteUserDB($id);
-            session_destroy();
-            header('Location: ' . URL . "accueil");
-        }
+    //Methode pour supprimer compte utilisateur
+    public function deleteUser($id)
+    {
+        $this->userManager->deleteUserDB($id);
+        session_destroy();
+        header('Location: ' . URL . "accueil");
+    }
+
+    // Affichage de tous les USERS à l'admin
+    public function displayUsers()
+    {
+        $users = $this->userManager->getUsers();
+        require_once "view/admin/users.view.php";
+    }
 }

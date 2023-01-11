@@ -9,6 +9,9 @@ $productController = new ProductController();
 require_once "controller/UserController.php";
 $userController = new UserController();
 
+require_once "controller/CategoryController.php";
+$categoryController = new CategoryController();
+
 if (empty($_GET['page'])) {
     $productController->displayFavProducts();
 } else {

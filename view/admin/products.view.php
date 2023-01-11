@@ -12,7 +12,7 @@
         <th>Catégorie</th>
         <th colspan="3">Action</th>
       </tr>
-    </thead>
+    </thead> 
     <tbody>
       <?php foreach ($products as $product) : ?>
         <tr class="table-light">
@@ -24,7 +24,7 @@
             <a href="<?= URL ?>admin/editproduct/<?= $product->getId() ?>"><i class="fa-solid fa-pen-to-square"></i></a>
           </td>
           <td>
-            <form action="<?= URL ?>admin/deleteproduct/<?= $product->getId() ?>" method="POST" onSubmit="return confirm('Etes-vous certains de vouloir supprimer ce jeu ?')">
+            <form action="<?= URL ?>admin/deleteproduct/<?= $product->getId() ?>" method="POST" onSubmit="return confirm('Etes-vous certains de vouloir supprimer ce produit ?')">
               <button class="btn" type="submit"><i class="fa-solid fa-trash"></i></button>
             </form>
           </td>

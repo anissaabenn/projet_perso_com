@@ -45,7 +45,7 @@ class ProductManager extends Manager
         $req->closeCursor();
 
         foreach ($myProducts as $product) {
-            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category']);
+            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category'], $product['nombreVente']);
             $this->addProduct($p);
         }
     }
@@ -60,7 +60,7 @@ class ProductManager extends Manager
         $req->closeCursor();
 
         foreach ($myProducts as $product) {
-            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category']);
+            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category'], $product['nombreVente']);
             $this->addProduct($p);
         }
     }
@@ -75,16 +75,16 @@ class ProductManager extends Manager
         $req->closeCursor();
 
         foreach ($myProducts as $product) {
-            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category']);
+            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category'],$product['nombreVente']);
             $this->addProduct($p);
         }
     }
 
     //Enregistrement d'un nouveau produit ds la BD
-    public function newProductDB($name, $price, $category, $photo1, $photo2, $description)
+    public function newProductDB($name, $price, $category, $photo1, $photo2, $description, $nombreVente)
     {
-        $req = "INSERT INTO products (name, price, category, photo1, photo2, description)
-                    VALUES (:name, :price, :category, :photo1, :photo2, :description)";
+        $req = "INSERT INTO products (name, price, category, photo1, photo2, description, nombreVente)
+                    VALUES (:name, :price, :category, :photo1, :photo2, :description, :nombreVente)";
         $statement = $this->getBdd()->prepare($req);
         $statement->bindValue(":name", $name, PDO::PARAM_STR);
         $statement->bindValue(":price", $price, PDO::PARAM_STR);
@@ -92,11 +92,12 @@ class ProductManager extends Manager
         $statement->bindValue(":photo1", $photo1, PDO::PARAM_STR);
         $statement->bindValue(":photo2", $photo2, PDO::PARAM_STR);
         $statement->bindValue(":description", $description, PDO::PARAM_STR);
+        $statement->bindValue(":nombreVente", $nombreVente, PDO::PARAM_STR);
         $result = $statement->execute();
         $statement->closeCursor();
 
         if ($result) {
-            $product = new Product($this->getBdd()->lastInsertId(), $name, $price, $category, $photo1, $photo2, $description);
+            $product = new Product($this->getBdd()->lastInsertId(), $name, $price, $category, $photo1, $photo2, $description, $nombreVente);
             $this->addProduct($product);
         }
     }

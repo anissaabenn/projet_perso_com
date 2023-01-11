@@ -5,7 +5,7 @@
 <div class="container">
   <table class="table table-hover text-center">
     <thead class="table-dark">
-      <tr>
+      <tr> 
         <th>ID</th>
         <th>Nom</th>
         <th colspan="2">Action</th>
@@ -20,7 +20,7 @@
             <a href="<?= URL ?>admin/editcategory/<?= $category->getId() ?>"><i class="fa-solid fa-pen-to-square"></i></a>
           </td>
           <td>
-            <form action="<?= URL ?>admin/deletecategory/<?= $category->getId() ?>" method="POST" onSubmit="return confirm('Etes-vous certains de vouloir supprimer ce jeu ?')">
+            <form action="<?= URL ?>admin/deletecategory/<?= $category->getId() ?>" method="POST" onSubmit="return confirm('Etes-vous certains de vouloir supprimer cette catégorie ?')">
               <button class="btn" type="submit"><i class="fa-solid fa-trash"></i></button>
             </form>
           </td>

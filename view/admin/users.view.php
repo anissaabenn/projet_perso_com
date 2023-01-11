@@ -14,7 +14,6 @@
         <th>Adresse</th>
         <th>Numéro de téléphone</th>
         <th>Role</th>
-        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -28,11 +27,6 @@
       <td><?= $user->getAdress() ?></td>
       <td><?= $user->getNumberPhone() ?></td>
       <td><?= $user->getRole() ?></td>
-          <td>
-            <form action="" method="POST" onSubmit="return confirm('Etes-vous certains de vouloir supprimer cet utilisateur ?')">
-              <button class="btn" type="submit"><i class="fa-solid fa-trash"></i></button>
-            </form>
-          </td>
         </tr>
         <?php endforeach; ?>
   </table>

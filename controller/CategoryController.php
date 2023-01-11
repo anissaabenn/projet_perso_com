@@ -14,20 +14,19 @@ class CategoryController
 
     public function displayCategory()
     {
-        $this->categoryManager->loadCategories();
         $categories = $this->categoryManager->getCategory();
         require_once "view/admin/category.view.php";
     }
 
     public function newCategoryForm()
     {
-        require_once "view/admin/edit.category.view.php";
+        require_once "view/admin/new.category.view.php";
     }
 
     public function newCategoryValidation()
     {
         $this->categoryManager->newCategoryDB($_POST['name']);
-        header('Location:' . URL . "admin/category");
+        header('Location:' . URL . "admin/categoryview");
     }
 
     public function editCategoryForm($id)
@@ -39,11 +38,11 @@ class CategoryController
 
     public function editCategoryValidation(){
         $this->categoryManager->editCategoryDB($_POST['id-category'], $_POST['name']);
-        header('Location: ' . URL . "admin/category");
+        header('Location: ' . URL . "admin/categoryview");
     }
 
     public function deleteCategory($id){
         $this->categoryManager->deleteCategoryDB($id);
-        header('Location: ' . URL . "admin/category");
+        header('Location: ' . URL . "admin/categoryview");
     }
 }

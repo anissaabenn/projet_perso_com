@@ -15,7 +15,6 @@ class CategoryManager extends Manager
     //Récupération de tous les produits pour l'admin
     public function getCategory()
     {
-        $this->loadCategories();
         return $this->categories;
     }
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") .
     "://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']));
 
@@ -35,7 +36,11 @@ if (empty($_GET['page'])) {
             $productController->displayProductsByCategory('serums', 'view/pageProductView/serums.view.php');
             break;
         case "connexion":
-            require_once "view/pageUserView/connexion.view.php";
+            if(empty($url[1])){
+                $userController->newConnexionForm();
+            }elseif($url[1] === "cvalid"){
+                $userController->connectUserValidation();
+            }
             break;
         case "inscription":
             if (empty($url[1])) {

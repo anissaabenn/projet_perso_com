@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="<?= URL ?>style/responsivestyle.css">
     <title>Projet perso cosmétique</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -29,8 +31,11 @@
                 </div>
             </ul>
             <div class="icone">
-                <a href="<?= URL ?>connexion" class="fa fa-user" role="button" style="font-size:25px;"></a>
-                <a href="#" class="fa fa-shopping-cart" role="button" style="font-size:25px;"></a>
+                <?php if (empty($_SESSION)) { ?>
+                    <a href="<?= URL ?>connexion" class="fa fa-user" role="button" style="font-size:25px;"></a>
+                <?php } elseif (!empty($_SESSION)) { ?>
+                    <a href="<?= URL ?>connexion/account" class="fa fa-user text-success" role="button" style="font-size:25px;"></a>
+                <?php } ?> <a href="#" class="fa fa-shopping-cart" role="button" style="font-size:25px;"></a>
             </div>
         </nav>
     </header>

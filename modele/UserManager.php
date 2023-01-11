@@ -2,7 +2,8 @@
 require_once "Manager.php";
 require_once "User.php";
 
-class UserManager extends Manager{
+class UserManager extends Manager
+{
     private $users;
 
     public function addUser($user)
@@ -33,7 +34,7 @@ class UserManager extends Manager{
     //Méthode pour enregistrement infos en BDD d'un nouveau user
     public function newUserDB($firstName, $lastName, $email, $password, $adress, $numberPhone, $role)
     {
-        
+
         $req = "INSERT INTO users (firstName, lastName, email, password, adress, numberPhone, role) VALUES (:firstName, :lastName, :email, :password, :adress, :numberPhone, :role)";
         $statement = $this->getBdd()->prepare($req);
         $statement->bindValue(":firstName", $firstName, PDO::PARAM_STR);
@@ -52,6 +53,20 @@ class UserManager extends Manager{
         if ($result) {
             $user = new User($this->getBdd()->lastInsertId(), $firstName, $lastName, $email, $password, $adress, $numberPhone, $role);
             $this->addUser($user);
+        }
+    }
+
+    //Méthode récupération user by email&password pour la connexion
+    public function getUserByEmail($email, $password)
+    {
+
+        $this->loadUsers();
+
+        foreach ($this->users as $value) {
+            if ($email == $value->getEmail() && $password !== $value->getPassword()) {
+            }elseif ($email == $value->getEmail() && $password == $value->getPassword()) {
+                return $value;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
 
     <div class="block">
         <h2 class="h2">Connexion</h2>
-        <form method="POST" id="form" action="#">
+        <form method="POST" id="form" action="<?= URL ?>connexion/cvalid">
             <fieldset>
                 <div class="form-group">
                     <label for="email" class="form-label mt-4">Adresse Email</label>

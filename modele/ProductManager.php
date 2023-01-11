@@ -80,7 +80,7 @@ class ProductManager extends Manager
         }
     }
 
-    //Enregistrement d'un nouveau produit ds la BD
+    //Enregistrement d'un nouveau produit ds la BDD
     public function newProductDB($name, $price, $category, $photo1, $photo2, $description, $nombreVente)
     {
         $req = "INSERT INTO products (name, price, category, photo1, photo2, description, nombreVente)
@@ -113,7 +113,7 @@ class ProductManager extends Manager
         }
     }
 
-    //Enregistrement des modif d'un produit dans la BD
+    //Enregistrement des modif d'un produit dans la BDD
     public function editProductDB($id, $name, $price, $category, $photo1, $photo2, $description)
     {
         $req = "UPDATE products SET name = :name, price = :price, category = :category, photo1 = :photo1, photo2 = :photo2, description = :description WHERE id = :id";
@@ -137,7 +137,7 @@ class ProductManager extends Manager
         }
     }
 
-    //Suppression d'un produit
+    //Suppression d'un produit ds la BDD
     public function deleteProductDB($id)
     {
         $req = "DELETE FROM products WHERE id = :id";

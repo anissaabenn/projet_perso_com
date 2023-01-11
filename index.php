@@ -43,15 +43,15 @@ if (empty($_GET['page'])) {
                 $userController->newConnexionForm();
             }elseif($url[1] === "cvalid"){
                 $userController->connectUserValidation();
+            }elseif($url[1] == "disconnected"){
+                session_destroy();
+                header('Location: ' . URL . "accueil");
             }elseif($url[1] === "account"){
                 require_once "view/pageUserView/account.view.php";
             }elseif($url[1] == "updateinfos"){
                 $userController->editInfosUserForm($url[2]);
             }elseif($url[1] == "editinfosvalid"){
                 $userController->editInfosValidation();
-            }elseif($url[1] == "disconnected"){
-                session_destroy();
-                header('Location: ' . URL . "accueil");
             }elseif($url[1] == "editpassword"){
                 $userController->newPasswordForm();
             }elseif($url[1] == "editpvalid"){
@@ -67,7 +67,7 @@ if (empty($_GET['page'])) {
                 $userController->newUserValidation();
             }
             break;
-            case "admin":
+        case "admin":
                 if (empty($url[1])){
                     require_once "view/admin/admin.view.php";
                 } elseif ($url[1] == "productsview"){

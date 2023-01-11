@@ -31,6 +31,8 @@ class CategoryManager extends Manager
         }
     }
 
+
+    //Enregistrement de nouvelle cat dans la BDD
     public function newCategoryDB($name)
     {
         $req = "INSERT INTO category (name) VALUES (:name)";
@@ -45,6 +47,8 @@ class CategoryManager extends Manager
         }
     }
 
+
+    //Récupération catégorie avec l'id
     public function getCategoryById($id)
     {
         $this->loadCategories();
@@ -55,6 +59,8 @@ class CategoryManager extends Manager
         }
     }
 
+
+    //Enregistrement modif catégorie dans BDD
     public function editCategoryDB($id, $name)
     {
         $req = "UPDATE category SET name = :name WHERE id = :id";
@@ -68,6 +74,8 @@ class CategoryManager extends Manager
         }
     }
 
+
+    //Supprimer une catégorie dans la BDD
     public function deleteCategoryDB($id)
     {
         $req = "DELETE FROM category WHERE id = :id";

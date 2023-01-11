@@ -40,6 +40,8 @@ if (empty($_GET['page'])) {
                 $userController->newConnexionForm();
             }elseif($url[1] === "cvalid"){
                 $userController->connectUserValidation();
+            }elseif($url[1] === "account"){
+                require_once "view/pageUserView/account.view.php";
             }
             break;
         case "inscription":

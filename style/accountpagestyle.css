@@ -62,3 +62,30 @@
     margin-top: 5%;
     margin-bottom: 2%;
 }
+
+/* ---------- PAGE MON COMPTE  --------- */
+
+.titleaccount{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 4%;
+}
+
+.d-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9.3%;
+}
+
+#updateaccount, #disconnected, #foradmin, #updatepassword, #deleteaccount {
+    width: 100%;
+    background-color: white;
+    color: #e4afd1;
+    font-size: 1.5em;
+}
+
+#updateaccount:hover, #disconnected:hover, #foradmin:hover, #updatepassword:hover, #deleteaccount:hover{
+    background-color: #BAD0F1;
+    color: black;
+}

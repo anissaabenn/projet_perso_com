@@ -23,9 +23,9 @@
                 </div>
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" id="block2">Skin</a>
                 <div class="dropdown-menu" id="sousblock2">
-                    <a class="dropdown-item" href="#">Nettoyants</a>
-                    <a class="dropdown-item" href="#">Crèmes</a>
-                    <a class="dropdown-item" href="#">Sérums</a>
+                    <a class="dropdown-item" href="./view/pageProductView/cleaners.view.php">Nettoyants</a>
+                    <a class="dropdown-item" href="./view/pageProductView/moisturizers.view.php">Crèmes</a>
+                    <a class="dropdown-item" href="./view/pageProductView/serums.view.php">Sérums</a>
                 </div>
             </ul>
             <div class="icone">

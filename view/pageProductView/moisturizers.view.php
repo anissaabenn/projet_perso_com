@@ -19,6 +19,7 @@
         <div class="modal" id="myModal_<?= $product->getId() ?>">
             <div class="modal_content">
                 <span class="close">&times;</span>
+                <h3><?= $product->getName() ?></h3>
                 <p><?= $product->getDescription() ?></p>
             </div>
         </div>

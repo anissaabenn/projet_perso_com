@@ -1,0 +1,284 @@
+@media screen and (max-width: 1200px){
+
+    /* body{
+        background-color: yellow;
+    } */
+
+    .img_accueil{
+        height: 35em;
+    }
+
+    .title1{
+        font-size: 8em;
+    }
+
+    .titleprod1{
+        margin-top: 8%;
+    }
+
+    h5{
+        font-size: 2em;
+    }
+
+    h6{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    /* body{
+        background-color: red;
+    } */
+
+    .dropdown-menu{
+        width: 40.3%;
+    }
+
+    .icone{
+        width: 10%;
+    }
+    
+    .d-flex{
+        left: 60%;
+    }
+
+    .img_accueil{
+        height: 30em;
+    }
+
+    .title1{
+        font-size: 6em;
+        letter-spacing: 40px;
+    }
+
+    #goOffer {
+        width: 25%;
+    }
+
+    .title2{
+        letter-spacing: 20px;
+        font-size: 3em;
+        margin: 5% 2% 5% 2%;
+    }
+
+    .text1{
+        margin-top: 20%;
+    }
+
+    .text2{
+        margin-top: 10%;
+    }
+
+    .text3{
+        margin-top: 15%;
+    }
+
+    .titleprod1{
+        margin-top: 12%;
+    }
+
+    .welcome{
+        margin-top: 10%;
+    }
+
+    #inscript{
+        margin-top: 8%;
+    }
+
+    .main{
+        margin-top: 12%;
+    }
+
+    .titleaccount{
+        margin-top: 11%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    /* body{
+        background-color: blue;
+    } */
+
+    .dropdown-menu{
+        width: 36.6%;
+    }
+
+    .icone{
+        width: 15%;
+    }
+
+    .navbar-brand{
+        width: 15%;
+    }
+
+    .d-flex{
+        flex-direction: column;
+        left: 60%;
+    }
+
+    .img_accueil{
+        height: 30em;
+        margin-top: 10em;
+    }
+
+    .badge{
+        width: 10%;
+    }
+
+    .title1{
+        font-size: 6em;
+        letter-spacing: 25px;
+    }
+
+    #goOffer {
+        font-size: 1.5em;
+        width: 25%;
+    }
+
+    .title2{
+        letter-spacing: 15px;
+        font-size: 2.5em;
+    }
+
+    h5{
+        font-size: 2em;
+    }
+
+    h6{
+        font-size: 1.2em;
+    }
+
+    .h3, .h4 {
+        font-size: 1em;
+    }
+
+    .all{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first, .second, .third {
+        width: 90%;
+    }
+
+    .text1{
+        margin-top: 5%;
+    }
+
+    .text2{
+        margin-top: 5%;
+    }
+
+    .text3{
+        margin-top: 5%;
+    }
+
+    .titleprod1{
+        margin-top: 21%;
+    }
+
+    .welcome{
+        margin-top: 22%;
+    }
+
+    .h2{
+        margin-top: 5%;
+    }
+
+    .block{
+        width: 80%;
+    }
+
+    .block2{
+        width: 80%;
+    }
+
+    .form-group{
+        width: 96%;
+    }
+
+    #inscript{
+        margin-top: 8%;
+    }
+
+    .main{
+        margin-top: 20%;
+    }
+
+    .main > h1{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    /* body{
+        background-color: orange;
+    } */
+
+    .d-flex{
+        left: 30%;
+    }
+
+    .img_accueil{
+        height: 15em;
+        margin-top: 12em;
+    }
+
+    .badge{
+        display: none;
+    }
+
+    .title1{
+        font-size: 3.5em;
+        letter-spacing: 20px;
+    }
+
+    
+    #goOffer {
+        font-size: 1em;
+        width: 30%;
+        height: 40%;
+    }
+
+    .title2{
+        letter-spacing: 10px;
+        font-size: 1.5em;
+    }
+
+    .article {
+        width: 45%;
+    } 
+
+    .h3, .h4 {
+        font-size: 0.8em;
+    }
+
+    h5{
+        font-size: 1em;
+    }
+
+    h6{
+        font-size: 0.8em;
+    }
+
+    .title{
+        font-size: 1.5em;
+    }
+
+    .titleprod1{
+        font-size: 1.7em;
+        margin-top: 35%;
+    }
+    .titleprod2{
+        font-size: 0.8em;
+    }
+
+    .titleaccount{
+        margin-top: 34%;
+    }
+
+}

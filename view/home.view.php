@@ -13,7 +13,7 @@
 
     <div class="favproducts">
         <?php foreach ($products as $product) : ?>
-            <div class="article">
+            <div class="article" id="myBtn_<?= $product->getId() ?>" onclick="displayModal(this)">
                 <img class="photos" src="<?= $product->getPhoto1() ?>" onmouseover="this.src='<?= $product->getPhoto2() ?>';" onmouseout="this.src='<?= $product->getPhoto1() ?>';">
                 <h3 class="h3"><?= $product->getName() ?></h3>
                 <h4 class="h4"><?= $product->getPrice() ?> €</h4>
@@ -22,6 +22,15 @@
         <?php endforeach; ?>
     </div>
 
+    <?php foreach ($products as $product) : ?>
+        <div class="modal" id="myModal_<?= $product->getId() ?>">
+            <div class="modal_content">
+                <span class="close">&times;</span>
+                <h3><?= $product->getName() ?></h3>
+                <p><?= $product->getDescription() ?></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
 
 
     <div class="valeurs">

@@ -60,7 +60,7 @@ class ProductManager extends Manager
         $req->closeCursor();
 
         foreach ($myProducts as $product) {
-            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category'], $product['nombreVente']);
+            $p = new Product($product['id'], $product['name'], $product['price'], $product['photo1'], $product['photo2'], $product['description'], $product['category']);
             $this->addProduct($p);
         }
     }

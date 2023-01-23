@@ -9,7 +9,7 @@ class ProductController
     public function __construct()
     {
         $this->productManager = new ProductManager;
-    }
+    } 
 
     //Affichage de tous les produits pour l'admin
     public function displayProducts()
